@@ -4,11 +4,11 @@ import ShoppingCartTwoToneIcon from "@mui/icons-material/ShoppingCartTwoTone";
 function NavBar() {
   return (
     <div className="sticky top-0 z-10 drop-shadow-xl">
-      <nav className="bg-white opacity-90 ">
+      <nav className="bg-white opacity-80 ">
         <div className="mx-auto px-6 py-3 flex items-center justify-between">
           <a
             href="/"
-            className="text-2xl font-bold text-black hover:text-gray-300 ml-0 lg:ml-20"
+            className="text-4xl font-bold text-black hover:text-gray-300 ml-0 lg:ml-20"
           >
             <h3>Avijit</h3>
           </a>
@@ -16,14 +16,14 @@ function NavBar() {
           <div className="flex items-center mr-0 lg:mr-20">
             <ul className="hidden lg:flex lg:items-center lg:justify-between lg:w-auto text-black font-bold">
               <li>
-                <a href="/" className="px-3 py-2 hover:text-gray-500 text-lg">
+                <a href="/" className="px-3 py-2 hover:text-gray-500 text-xl">
                   Home
                 </a>
               </li>
               <li>
                 <a
                   href="#about"
-                  className="px-3 py-2 hover:text-gray-500 text-lg"
+                  className="px-3 py-2 hover:text-gray-500 text-xl"
                 >
                   About
                 </a>
@@ -31,7 +31,7 @@ function NavBar() {
               <li>
                 <a
                   href="/products"
-                  className="px-3 py-2 hover:text-gray-500 text-lg"
+                  className="px-3 py-2 hover:text-gray-500 text-xl"
                 >
                   Product
                 </a>
@@ -39,13 +39,13 @@ function NavBar() {
               <li>
                 <a
                   href="#contact"
-                  className="px-3 py-2 hover:text-gray-500 text-lg"
+                  className="px-3 py-2 hover:text-gray-500 text-xl"
                 >
                   Contact
                 </a>
               </li>
             </ul>
-            <div className="flex items-center ml-14 hover:scale-125 cursor-pointer">
+            <div className="flex items-center ml-14 scale-125 cursor-pointer">
               <a href="/cart">
                 <ShoppingCartTwoToneIcon className="text-black " />
               </a>
