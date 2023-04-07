@@ -1,19 +1,15 @@
+import PropTypes from "prop-types";
 import React from "react";
 import { useStateValue } from "../StateProvider";
 
-function Item({ img, id, category, title, price, rating }) {
+function CheckoutProduct({ id, title, img, price, rating }) {
+  // eslint-disable-next-line no-unused-vars
   const [{ basket }, dispatch] = useStateValue();
-  const addToBasket = () => {
+
+  const removeFromBasket = () => {
     dispatch({
-      type: "ADD_TO_BASKET",
-      item: {
-        id,
-        title,
-        img,
-        price,
-        rating,
-        category,
-      },
+      type: "REMOVE_FROM_BASKET",
+      id,
     });
   };
   return (
@@ -40,13 +36,19 @@ function Item({ img, id, category, title, price, rating }) {
 
       <button
         type="button"
-        onClick={addToBasket}
+        onClick={removeFromBasket}
         className="bg-black border-2 border-black text-white py-2 px-4 rounded-md font-bold cursor-pointer hover:bg-white hover:text-black transition duration-300"
       >
-        Add to Cart
+        Remove
       </button>
     </div>
   );
 }
-
-export default Item;
+CheckoutProduct.propTypes = {
+  id: PropTypes.any,
+  title: PropTypes.any,
+  image: PropTypes.any,
+  price: PropTypes.any,
+  rating: PropTypes.any,
+};
+export default CheckoutProduct;

@@ -17,7 +17,7 @@ function NavBar() {
             href=""
             className="text-6xl font-bold text-black hover:text-gray-300 ml-0 lg:ml-20"
           >
-            <Link to="/">
+            <Link to="/" onClick={() => handleLinkClick("home")}>
               <h3>Avijit</h3>
             </Link>
           </a>
@@ -79,7 +79,14 @@ function NavBar() {
                 </li>
               </ul>
             </div>
-            <div className="flex items-center ml-14 scale-125 hover:scale-110 cursor-pointer">
+            <div
+              onClick={() => handleLinkClick("cart")}
+              className={`flex items-center ml-14 scale-125 hover:scale-110 cursor-pointer ${
+                activeLink === "cart"
+                  ? "text-gray-500 border-b-2 border-black"
+                  : ""
+              }`}
+            >
               <a href="/cart">
                 <Link to="/cart">
                   <ShoppingCartTwoToneIcon className="text-black " />
