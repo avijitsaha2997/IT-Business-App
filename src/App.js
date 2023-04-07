@@ -1,4 +1,4 @@
-import "./App.css";
+import About from "./components/About";
 import CheckoutPage from "./components/CheckoutPage";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -25,6 +25,7 @@ function App() {
             </div>
           }
         />
+        <Route path="/about" element={<About />} />
         <Route path="/product" element={<Products />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<CheckoutPage />} />
