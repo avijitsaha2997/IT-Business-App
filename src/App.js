@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
 import Products from "./components/Products";
+import SideBar from "./components/SideBar";
 import SlideContent from "./components/SlideContent";
 import { Routes, Route } from "react-router-dom";
 
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className="">
       <NavBar />
+      <SideBar />
       <Routes>
         <Route
           path="/"

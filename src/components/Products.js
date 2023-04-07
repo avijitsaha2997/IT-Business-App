@@ -11,12 +11,23 @@ function Products() {
   };
 
   useEffect(() => {
+    let isMounted = true;
+
     async function fetchData() {
-      const req = await axios.get("https://fakestoreapi.com/products");
-      setItems(req.data);
-      console.log(items);
+      try {
+        const req = await axios.get("https://fakestoreapi.com/products");
+        if (isMounted) {
+          setItems(req.data);
+        }
+      } catch (error) {
+        console.log(error);
+      }
     }
     fetchData();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (

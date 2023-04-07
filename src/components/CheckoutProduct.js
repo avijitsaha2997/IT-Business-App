@@ -44,11 +44,5 @@ function CheckoutProduct({ id, title, img, price, rating }) {
     </div>
   );
 }
-CheckoutProduct.propTypes = {
-  id: PropTypes.any,
-  title: PropTypes.any,
-  image: PropTypes.any,
-  price: PropTypes.any,
-  rating: PropTypes.any,
-};
+
 export default CheckoutProduct;
