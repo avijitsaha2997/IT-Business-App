@@ -42,6 +42,18 @@ export default function Slider() {
             alt=""
           />
         </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/2_d2b66bbf-c49d-4e6b-a47c-21b7f2475431.png?v=1658573133"
+            alt=""
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://www.geewiz.co.za/234359-large_default/echo-dot-smart-speaker-with-alexa-5th-gen-2022-release.jpg"
+            alt=""
+          />
+        </SwiperSlide>
       </Swiper>
     </div>
   );

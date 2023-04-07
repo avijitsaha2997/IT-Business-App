@@ -1,5 +1,5 @@
 import "./App.css";
-import CategoryList from "./components/CategoryList";
+
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -24,15 +24,8 @@ function App() {
             </div>
           }
         />
-        <Route
-          path="/products"
-          element={
-            <div>
-              <CategoryList />
-              <Products />
-            </div>
-          }
-        />
+        <Route path="/product" element={<Products />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   );
