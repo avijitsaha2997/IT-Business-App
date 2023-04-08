@@ -52,10 +52,15 @@ function Hero() {
           gadgets.
         </p>
         <div className="flex items-center justify-evenly w-full">
-          <FacebookIcon className="scale-150"></FacebookIcon>
-          <InstagramIcon className="scale-150"></InstagramIcon>
-          <GitHubIcon className="scale-150"></GitHubIcon>
-          <LinkedInIcon className="scale-150"></LinkedInIcon>
+          <a href="https://www.facebook.com/wwwhite.angelll/">
+            <FacebookIcon className="scale-150 cursor-pointer hover:scale-125" />
+          </a>
+          <a href="https://www.linkedin.com/in/avijitsaha2997/">
+            <LinkedInIcon className="scale-150 cursor-pointer hover:scale-125" />
+          </a>
+          <a href="https://github.com/avijitsaha2997">
+            <GitHubIcon className="scale-150 cursor-pointer hover:scale-125" />
+          </a>
         </div>
       </motion.div>
     </div>

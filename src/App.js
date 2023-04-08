@@ -8,6 +8,7 @@ import Products from "./components/Products";
 import SideBar from "./components/SideBar";
 import SlideContent from "./components/SlideContent";
 import { Routes, Route } from "react-router-dom";
+import Team from "./components/Team";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <div>
               <Hero />
               <SlideContent />
+              <Team />
               <Footer />
             </div>
           }

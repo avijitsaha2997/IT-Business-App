@@ -25,7 +25,7 @@ function Item({ img, id, category, title, price, rating }) {
         </div>
 
         <div className="flex mt-6">
-          <p className="text-xl pr-2">❤️❤️</p>
+          <p className="text-xl pr-2">❤️</p>
           <p className="text-xl">{rating.rate}</p>
         </div>
 
