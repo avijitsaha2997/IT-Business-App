@@ -7,9 +7,20 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 function Hero() {
   return (
     <div className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-7 justify-evenly mx-auto items-center">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-black text-2xl lg:text-4xl font-semibold">
+      <motion.h3
+        initial={{
+          y: -200,
+          opacity: 0,
+        }}
+        transition={{
+          duration: 1.2,
+        }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="absolute top-24 uppercase tracking-[20px] text-black text-2xl lg:text-4xl font-semibold"
+      >
         WELCOME TO OUR STORE
-      </h3>
+      </motion.h3>
       <motion.img
         initial={{
           x: -200,

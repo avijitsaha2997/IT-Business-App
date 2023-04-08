@@ -35,7 +35,7 @@ function Products() {
       <div className="flex flex-col gap-4 md:flex-row justify-evenly items-center text-2xl mt-16 mb-8">
         <button
           className={`${
-            category === "" ? "bg-black" : "bg-gray-500"
+            category === "" ? "bg-black" : "bg-gray-400"
           } text-white py-2 px-4 rounded`}
           onClick={() => handleCategoryClick("")}
         >
@@ -44,7 +44,7 @@ function Products() {
 
         <button
           className={`${
-            category === "women's clothing" ? "bg-black" : "bg-gray-500"
+            category === "women's clothing" ? "bg-black" : "bg-gray-400"
           } text-white py-2 px-4 rounded`}
           onClick={() => handleCategoryClick("women's clothing")}
         >
@@ -52,7 +52,7 @@ function Products() {
         </button>
         <button
           className={`${
-            category === "electronics" ? "bg-black" : "bg-gray-500"
+            category === "electronics" ? "bg-black" : "bg-gray-400"
           } text-white py-2 px-4 rounded`}
           onClick={() => handleCategoryClick("electronics")}
         >
@@ -60,7 +60,7 @@ function Products() {
         </button>
         <button
           className={`${
-            category === "jewelery" ? "bg-black" : "bg-gray-500"
+            category === "jewelery" ? "bg-black" : "bg-gray-400"
           } text-white py-2 px-4 rounded`}
           onClick={() => handleCategoryClick("jewelery")}
         >
@@ -68,7 +68,7 @@ function Products() {
         </button>
         <button
           className={`${
-            category === "men's clothing" ? "bg-black" : "bg-gray-500"
+            category === "men's clothing" ? "bg-black" : "bg-gray-400"
           } text-white py-2 px-4 rounded`}
           onClick={() => handleCategoryClick("men's clothing")}
         >

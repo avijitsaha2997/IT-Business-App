@@ -9,6 +9,7 @@ import SideBar from "./components/SideBar";
 import SlideContent from "./components/SlideContent";
 import { Routes, Route } from "react-router-dom";
 import Team from "./components/Team";
+import Mission from "./components/Mission";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Hero />
               <SlideContent />
               <Team />
+              <Mission />
               <Footer />
             </div>
           }
