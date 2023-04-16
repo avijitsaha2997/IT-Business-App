@@ -8,7 +8,7 @@ function Team() {
       <h1 className="text-base font-semibold md:text-xl lg:text-2xl text-center text-gray-800 uppercase mb-8 tracking-[15px]">
         TEAM MEMBERS
       </h1>
-      <div className="w-full flex items-center justify-evenly mt-10 mb-24">
+      <div className="w-full flex flex-col sm:flex-row items-center justify-evenly mt-10 mb-24">
         <TeamMember
           memberImage={pic}
           memberName={"Avijit Saha"}

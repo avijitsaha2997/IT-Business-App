@@ -4,11 +4,16 @@ import ShoppingCartTwoToneIcon from "@mui/icons-material/ShoppingCartTwoTone";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../StateProvider";
 import { motion } from "framer-motion";
-
+import { auth } from "../firebase";
 function NavBar() {
   const [activeLink, setActiveLink] = useState("");
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ user, basket }, dispatch] = useStateValue();
 
+  const logout = () => {
+    if (user) {
+      auth.signOut();
+    }
+  };
   const handleLinkClick = (link) => {
     setActiveLink(link);
   };
@@ -43,7 +48,7 @@ function NavBar() {
             }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex items-center mr-0 lg:mr-20"
+            className="flex items-center mr-0 lg:mr-3"
           >
             <div>
               <ul className="hidden lg:flex lg:items-center lg:justify-between lg:w-auto text-black font-bold">
@@ -110,6 +115,30 @@ function NavBar() {
               </Link>
 
               <p className="text-black  font-bold  text-lg">{basket.length}</p>
+            </div>
+            <div>
+              {user ? (
+                <div className="ml-6">
+                  {/* <img /> */}
+                  <p className="cursor-pointer text-base">{user?.email}</p>
+                  <p
+                    className="cursor-pointer text-base font-bold"
+                    onClick={logout}
+                  >
+                    Sign Out
+                  </p>
+                </div>
+              ) : (
+                <div className="ml-6">
+                  {/* <img /> */}
+                  <p className="cursor-pointer text-base">Geust User</p>
+                  <Link to={"/login"}>
+                    <p className="cursor-pointer text-base font-bold">
+                      Sign In
+                    </p>
+                  </Link>
+                </div>
+              )}
             </div>
           </motion.div>
         </div>
