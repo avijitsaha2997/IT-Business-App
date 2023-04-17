@@ -100,6 +100,7 @@ function Products() {
                   category={item.category}
                   rating={item.rating}
                   price={item.price}
+                  quantity={1}
                 />
               );
             }

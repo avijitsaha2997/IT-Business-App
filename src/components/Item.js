@@ -1,7 +1,8 @@
 import React from "react";
 import { useStateValue } from "../StateProvider";
-
-function Item({ img, id, category, title, price, rating }) {
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+function Item({ img, id, category, title, price, rating, quantity }) {
   const [{ basket }, dispatch] = useStateValue();
   const addToBasket = () => {
     dispatch({
@@ -13,6 +14,7 @@ function Item({ img, id, category, title, price, rating }) {
         price,
         rating,
         category,
+        quantity,
       },
     });
   };
@@ -30,8 +32,11 @@ function Item({ img, id, category, title, price, rating }) {
         </div>
 
         <div className="flex items-center justify-center">
-          <img
+          <LazyLoadImage
+            effect="blur"
             src={img}
+            height={"250px"}
+            width={"250px"}
             alt=""
             className="w-full h-52 object-contain p-4 mt-4"
           />
